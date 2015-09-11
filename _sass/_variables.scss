@@ -14,9 +14,11 @@ $gray: #666;
 $lightGray: #eee;
 $white: #fff;
 
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 // Font stacks
-$helvetica: 'Helvetica Neue',Helvetica,Arial,'游ゴシック',YuGothic,'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','ＭＳ Ｐゴシック',sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$helvetica: 'Roboto Condensed', 'Helvetica Neue',Helvetica,Arial,'游ゴシック',YuGothic,'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','ＭＳ Ｐゴシック',sans-serif;
+$helveticaNeue: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 // Mobile breakpoints

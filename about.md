@@ -4,12 +4,47 @@ title: About
 permalink: /about/
 ---
 
-CINRAのエンジニアの濱田です。
+渋谷にある制作会社であり、多数のメディアを持つ一大コンマグリット（社員数40人弱／2015年9月現在）である株式会社CINRAのエンジニアが、日々直面した技術的な些事を書き溜めていこうと重い腰を上げたのが当サイトです。
 
-### More Information
+## Fields
 
-A place to include any other types of information that you'd like to include about yourself.
+### Backend
+- PHP
+	- Wordpress
+	- FuelPHP
+	- Composer
+	- Codeigniter
+	- EC-Cube
+- Ruby
+  - Ruby on Rails
 
-### Contact me
+### Frontend
+- HTML
+- CSS
+  - Sass / SCSS
+  - Compass
+- Javascript
+  - jQuery
+  - Vue.js
+  - Underscore.js
+  - Angular.js
+  - Backbone.js
+  - Three.js
+  - Paper.js
 
-[tkcs@pelepop.com](mailto:tkcs@pelepop.com)
+### Design
+- UI/UX
+
+### Infrastructure
+- AWS
+- Chef
+- Apache
+
+### Work
+- Team
+- Recruiting
+
+### Contact
+
+- [Github](https://github.com/mcatm)
+- [tkcs@pelepop.com](mailto:tkcs@pelepop.com)
