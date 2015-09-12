@@ -17,12 +17,16 @@ permalink: /about/
 	- EC-Cube
 - Ruby
   - Ruby on Rails
+- node.js
+  - meteor
+  - ghost
 
 ### Frontend
 - HTML
 - CSS
   - Sass / SCSS
   - Compass
+  - Bootstrap
 - Javascript
   - jQuery
   - Vue.js
@@ -39,6 +43,7 @@ permalink: /about/
 - AWS
 - Chef
 - Apache
+- Vagrant
 
 ### Work
 - Team
