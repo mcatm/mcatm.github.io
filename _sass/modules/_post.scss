@@ -1,0 +1,45 @@
+
+
+.post-title {
+  border-bottom: $smallBorder solid #000;
+  text-transform: uppercase;
+  > a, span {
+    display: block;
+    padding:16px 20px;
+    font-size:2.4rem;
+    font-family: $strongFont;
+    color: #000;
+  }
+}
+
+.post-body {
+  padding-top: 20px;
+  > p,
+  > pre,
+  > div,
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > ul,
+  > ol,
+  > blockquote {
+    padding:0 20px 20px;
+    > img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.post-excerpt {
+  padding: 20px;
+}
+
+.post-footer {
+  padding: 20px;
+  border-top: $smallBorder dotted #000;
+  font-size: 0.8rem;
+}
