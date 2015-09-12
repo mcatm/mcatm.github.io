@@ -9,43 +9,52 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
+    
+    <div class="l-wrapper">
+      <aside class="l-side js-wrapper">
+        <header class="l-header">
+          <a href="/" class="header-logo">M</a>
         </header>
-      </div>
+        
+        <!--div class="site-info">
+          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+          <p class="site-description">{{ site.description }}</p>
+        </div-->
+
+        <div class="l-profile">
+          <p>技術的なことしか語らないことにした男のブログ。当ブログでは技術的／職務的なことしか語りませんし、他のところでは技術的なことは一切語りません</p>
+        </div>
+
+        <nav class="l-nav">
+          <ul>
+            <li><a href="/">Posts</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="l-main js-wrapper">
+        {{ content }}
+      </main>
+
+
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
-
-    <div class="wrapper-footer">
+    <footer class="l-footer js-offset">
       <div class="container">
         <footer class="footer">
-          {% include svg-icons.html %}
+          Test: {% include svg-icons.html %}
         </footer>
       </div>
-    </div>
+    </footer>
 
     {% include analytics.html %}
   </body>
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
 </html>
