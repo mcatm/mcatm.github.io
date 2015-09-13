@@ -1,5 +1,11 @@
 (function($) {
 
+  /* ----------------------------------------------------------
+  
+    ￼Size Adjust
+  
+  ---------------------------------------------------------- */
+
   $(window).on('resize.adjustHeight', function() {
     var winHeight = $(window).height(),
         maxHeight = winHeight,
@@ -8,7 +14,6 @@
       
       $('.js-wrapper').each(function() {
         var tmpHeight = $(this).outerHeight();
-        console.log(tmpHeight);
         if (maxHeight < tmpHeight) maxHeight = tmpHeight;
       });
 
@@ -18,5 +23,15 @@
     }
   }).trigger('resize.adjustHeight');
 
+  /* ----------------------------------------------------------
+  
+    ￼New Window
+  
+  ---------------------------------------------------------- */
+
+  $('a').each(function() {
+    var href = $(this).attr('href');
+    if (href.match(/^http/)) $(this).attr('target', '_blank');
+  });
 
 })(jQuery);

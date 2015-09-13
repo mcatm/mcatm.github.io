@@ -1,0 +1,23 @@
+.footer-container {
+  padding-bottom:20px;
+  h6 {
+    display: inline-block;
+  }
+  ul {
+    list-style: none;
+    li {
+      display:inline-block;
+      margin-right: 10px;
+      &.label {
+        font-family: $strongFont;
+        font-size:1rem;
+      }
+    }
+  }
+}
+
+.footer-credit {
+	padding:12px 0 0;
+  border-top:$xsBorder solid #444;
+  font-size: 0.8rem;
+}

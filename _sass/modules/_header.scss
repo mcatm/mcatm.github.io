@@ -21,13 +21,13 @@
   }
 
   @include mobile {
-    background: transparent;
-    color: #000;
+    background: #000;
+    color: $baseColor;
     font-size: 1.8rem;
     font-weight: 800;
 
     &:hover {
-      color: #000;
+      color: $baseColor;
     }
 
     .show-mobile {

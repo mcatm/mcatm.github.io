@@ -30,7 +30,7 @@ a {
   margin:auto;
   width:980px;
   max-height:100%;
-  //overflow: hidden;
+  overflow: hidden;
   border-top: $bigBorder solid #000;
   border-left: $bigBorder solid #000;
   border-right: $bigBorder solid #000;
@@ -172,10 +172,23 @@ a {
   background: #000;
   color: #FFF;
   padding: 20px 0;
-  font-size: 0.8rem;
   border-left: $bigBorder solid #000;
   border-right: $bigBorder solid #000;
+
+  a {
+    color: #FFF;
+    &:hover {
+      color: $baseColor;
+      text-decoration: none;
+    }
+  }
+
+  .footer-container {
+
+  }
+
   @include mobile {
     width: 100%;
+    padding: 20px 10px;
   }
 }
