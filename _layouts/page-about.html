@@ -3,15 +3,14 @@ layout: default
 ---
 
 <article class="l-post">
+
   <h1 class="post-title">
-    <span><i class="fa fa-cubes"></i> {{ page.title }}</span>
+    <span><i class="fa fa-coffee"></i> {{ page.title }}</span>
   </h1>
 
   <div class="post-body">
     {{ content }}
-  </div>
 
-  <div class="post-footer">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    {% include nav-categories.html %}
   </div>
 </article>
