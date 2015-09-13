@@ -1,0 +1,27 @@
+.header-logo {
+  display: block;
+  color: #FFF;
+  font-family: $strongFont;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10rem;
+  background: #000;
+  border-top: $middleBorder solid #000;
+  border-bottom: $middleBorder solid #000;
+  
+  &:hover {
+    text-decoration: none;
+    color: $baseColor;
+  }
+
+  @include mobile {
+    background: transparent;
+    color: #000;
+    font-size: 6rem;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
