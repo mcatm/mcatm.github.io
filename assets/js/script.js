@@ -4,11 +4,12 @@
     var winHeight = $(window).height(),
         offsetHeight = $('.js-offset').outerHeight();
     if ($(window).width() > 980) {
-      $('.js-wrapper').css('minHeight', winHeight - offsetHeight);
+      console.log($('.js-wrapper').height());
+      if ( winHeight > $('.js-wrapper').height() ) $('.js-wrapper').css('minHeight', winHeight - offsetHeight);
     } else {
       $('.js-wrapper').css('minHeight', 0);
     }
   }).trigger('resize.adjustHeight');
-  
+
 
 })(jQuery);
