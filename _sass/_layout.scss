@@ -1,0 +1,194 @@
+
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body {
+  background: $baseColor;
+  font-family: $baseFont;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+body {
+  padding: 20px 0;
+  @include mobile {
+    padding:0;
+  }
+}
+
+a {
+  color: $subColor1;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.l-wrapper {
+  margin:auto;
+  width:980px;
+  max-height:100%;
+  overflow: hidden;
+  border-top: $bigBorder solid #000;
+  border-left: $bigBorder solid #000;
+  border-right: $bigBorder solid #000;
+  @include mobile {
+    width: 100%;
+    border: none;
+  }
+}
+
+.l-main {
+  width:680px;
+  height: 100%;
+  //background: #FFF;
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.l-side {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:276px;
+  height: 100%;
+  border-left: $middleBorder solid #000;
+
+  @include mobile {
+    position: relative;
+    width: 100%;
+    border: none;
+  }
+}
+
+.l-header {
+  width: 100%;
+  height: 272px;
+  display: table;
+
+  @include mobile {
+    height: 100px;
+  }
+}
+
+.l-profile {
+  border-bottom: $middleBorder solid #000;
+  font-size: 0.9rem;
+  > p {
+    padding: 10px;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.l-nav {
+  font-family: $strongFont;
+  border-bottom: $smallBorder solid #000;
+  a {
+    color: #000;
+  }
+  > ul {
+    > li {
+      border-bottom: $xsBorder solid #000;
+      &:last-child {
+        border:none;
+      }
+      > a {
+        padding:10px;
+        display: block;
+        &:hover {
+          background: #000;
+          text-decoration: none;
+          color: $baseColor;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    > ul {
+      text-align: center;
+      font-size: 1.4rem;
+      > li {
+        display: inline-block;
+        border: none;
+        > a {
+          padding:20px;
+          &:hover {
+            background: inherit;
+            text-decoration: underline;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.l-categories {
+
+  h2 {
+    padding: 10px;
+    font-family: $strongFont;
+    font-size: 1.4rem;
+    border-bottom: $xsBorder dashed #000;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    padding: 10px;
+    font-family: $strongFont;
+    font-weight: 400;
+    border-bottom: $xsBorder solid $baseDarkColor;
+  }
+
+  ul {
+    list-style-position: inside;
+    li {
+      font-size: 1rem;
+      padding: 10px;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.l-post {
+
+}
+
+.l-footer {
+  width: 100%;
+  margin:auto;
+  width:980px;
+  background: #000;
+  color: #FFF;
+  padding: 20px 0;
+  border-left: $bigBorder solid #000;
+  border-right: $bigBorder solid #000;
+
+  a {
+    color: #FFF;
+    &:hover {
+      color: $baseColor;
+      text-decoration: none;
+    }
+  }
+
+  .footer-container {
+
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 20px 10px;
+  }
+}

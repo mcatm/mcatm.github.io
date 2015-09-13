@@ -1,29 +1,29 @@
 
-//
-// VARIABLES
-//
-
 // Colors
-$blue: #4183C4;
+$bgColor: #FFFFFF;
+$baseColor: #F6CA06;
+$baseDarkColor: #E2B700;
+$subColor1: #007FB1;
+$subColor2: #009F8C;
+$subColor3: #D8E212;
+$subColor4: #DA5019;
 
-// Grays
-$black: #000;
-$darkerGray: #222;
-$darkGray: #333;
-$gray: #666;
-$lightGray: #eee;
-$white: #fff;
+// Borders
+$bigBorder: 12px;
+$middleBorder: 4px;
+$smallBorder: 2px;
+$xsBorder: 1px;
+
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 // Font stacks
-$helvetica: 'Roboto Condensed', 'Helvetica Neue',Helvetica,Arial,'游ゴシック',YuGothic,'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','ＭＳ Ｐゴシック',sans-serif;
-$helveticaNeue: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$baseFont: '游ゴシック', YuGothic, Helvetica, Arial, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','ＭＳ Ｐゴシック',sans-serif;
+$strongFont: 'Roboto Condensed', 'Helvetica Neue', '游ゴシック', YuGothic, Helvetica, Arial, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro',Meiryo,'メイリオ','ＭＳ Ｐゴシック',sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 980px) {
     @content;
   }
 }

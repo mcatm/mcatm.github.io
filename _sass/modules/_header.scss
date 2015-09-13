@@ -1,0 +1,42 @@
+.header-logo {
+  display: block;
+  color: $baseColor;
+  font-family: $strongFont;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10rem;
+  background: url(../img/me.png) #000 50% 50% no-repeat;
+  background-size: cover;
+  border-top: $middleBorder solid #000;
+  border-bottom: $middleBorder solid #000;
+
+  .show-mobile {
+    display:none;
+  }
+  
+  &:hover {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  @include mobile {
+    background: #000;
+    color: $baseColor;
+    font-size: 1.8rem;
+    font-weight: 800;
+
+    &:hover {
+      color: $baseColor;
+    }
+
+    .show-mobile {
+      display: block;
+      font-family: $strongFont;
+    }
+
+    svg {
+      display:none;
+    }
+  }
+}
