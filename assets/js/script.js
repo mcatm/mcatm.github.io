@@ -2,10 +2,17 @@
 
   $(window).on('resize.adjustHeight', function() {
     var winHeight = $(window).height(),
+        maxHeight = winHeight,
         offsetHeight = $('.js-offset').outerHeight();
     if ($(window).width() > 980) {
-      console.log($('.js-wrapper').height());
-      if ( winHeight > $('.js-wrapper').height() ) $('.js-wrapper').css('minHeight', winHeight - offsetHeight);
+      
+      $('.js-wrapper').each(function() {
+        var tmpHeight = $(this).outerHeight();
+        console.log(tmpHeight);
+        if (maxHeight < tmpHeight) maxHeight = tmpHeight;
+      });
+
+      $('.js-wrapper').css('minHeight', maxHeight);
     } else {
       $('.js-wrapper').css('minHeight', 0);
     }
