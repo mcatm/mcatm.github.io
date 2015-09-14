@@ -28,7 +28,7 @@ $strongFont: 'Roboto Condensed', 'Helvetica Neue', '游ゴシック', YuGothic, 
   }
 }
 
-//
+// Icon
 @mixin icon( $content ) {
   &:before {
     font-family: FontAwesome;
