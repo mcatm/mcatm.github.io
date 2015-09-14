@@ -33,6 +33,8 @@ permalink: /post/angularjs-dont-make-us-happy/
 
 [WP REST API](http://wp-api.org/)
 
+<img src="/i/wp-rest-api-v2.png" >
+
 ※ ver 2のドキュメントはあまりに制作途中なので、ver 1のものと併せて参照するのが吉。
 
 これを仕込んだWordpressをどこかに置いて、実際の読み込みには以下の様な単純なAjax処理を書いてやれば動きます。（Vue.js使っています）
