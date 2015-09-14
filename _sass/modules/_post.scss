@@ -112,7 +112,7 @@
     list-style-position: inside;
     list-style: none;
     > li {
-      @include arrow;
+      @include fa-icon($fa-var-angle-right);
       > ul {
         margin-left: 20px;
       }

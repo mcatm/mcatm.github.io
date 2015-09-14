@@ -29,10 +29,10 @@ $strongFont: 'Roboto Condensed', 'Helvetica Neue', '游ゴシック', YuGothic, 
 }
 
 //
-@mixin arrow {
+@mixin fa-icon( $content ) {
   &:before {
     font-family: FontAwesome;
-    content: "\f105";
+    content: $content;
     margin-right: 8px;
   }
 }
