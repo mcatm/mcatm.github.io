@@ -20,7 +20,7 @@ permalink: /about/
 
 何かありましたら是非[イシュー立て](https://github.com/mcatm/mcatm.github.io/issues)してください。なんなら、訂正文をPR送ってくれてもありがたいです。
 
-## Target
+## Subjects
 
 - バックエンドの技術について：PHPやRuby、Node.js
 - フロントエンドの技術について：CSSやJS
