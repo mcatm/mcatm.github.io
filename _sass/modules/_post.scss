@@ -112,6 +112,7 @@
     list-style-position: inside;
     list-style: none;
     > li {
+      @include arrow;
       > ul {
         margin-left: 20px;
       }

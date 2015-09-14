@@ -27,3 +27,12 @@ $strongFont: 'Roboto Condensed', 'Helvetica Neue', '游ゴシック', YuGothic, 
     @content;
   }
 }
+
+//
+@mixin arrow {
+  &:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    margin-right: 8px;
+  }
+}
