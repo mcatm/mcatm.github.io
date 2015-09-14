@@ -29,7 +29,7 @@ $strongFont: 'Roboto Condensed', 'Helvetica Neue', '游ゴシック', YuGothic, 
 }
 
 //
-@mixin fa-icon( $content ) {
+@mixin icon( $content ) {
   &:before {
     font-family: FontAwesome;
     content: $content;

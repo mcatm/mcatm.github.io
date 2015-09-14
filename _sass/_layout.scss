@@ -100,7 +100,7 @@ a {
       > a {
         padding:10px;
         display: block;
-        @include fa-icon($fa-var-angle-right);
+        @include icon($fa-var-angle-right);
         &:hover {
           background: #000;
           text-decoration: none;
