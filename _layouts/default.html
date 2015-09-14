@@ -18,13 +18,11 @@
     <div class="l-wrapper">
       <aside class="l-side js-wrapper">
         <header class="l-header">
-          <a href="/" class="header-logo">M</a>
+          <a href="/" class="header-logo">
+            {% include logo.html %}
+            <span class="show-mobile">MCATM SAYS NOTHING</span>
+          </a>
         </header>
-
-        <!--div class="site-info">
-          <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-          <p class="site-description">{{ site.description }}</p>
-        </div-->
 
         <div class="l-profile">
           <p>技術的なことしか語らないことにした男のブログ。当ブログでは技術的／職務的なことしか語りませんし、他のところでは技術的なことは一切語りません</p>
@@ -32,10 +30,15 @@
 
         <nav class="l-nav">
           <ul>
-            <li><a href="/">Posts</a></li>
+            <li><a href="/">Archives</a></li>
             <li><a href="/about">About</a></li>
           </ul>
         </nav>
+
+        <!--div class="l-categories">
+          <h2>Categories</h2>
+          {% include nav-categories.html %}
+        </div-->
       </aside>
 
       <main class="l-main js-wrapper">
@@ -46,11 +49,19 @@
     </div>
 
     <footer class="l-footer js-offset">
-      <div class="container">
-        <footer class="footer">
-          Test: {% include svg-icons.html %}
-        </footer>
+      <div class="footer-container">
+        <ul>
+          <li><a href="https://github.com/mcatm"><i class="fa fa-github"></i> Github</a></li>
+          <li><a href="https://twitter.com/mcatm"><i class="fa fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.facebook.com/mcatm.pelepop"><i class="fa fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://plus.google.com/+SatoshiHamada/posts"><i class="fa fa-google-plus"></i> Google+</a></li>
+          <li><a href="https://instagram.com/mcatm/"><i class="fa fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://www.pinterest.com/mcatm77/"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+          <li><a href="http://www.linkedin.com/pub/hamada-satoshi/33/4bb/17b"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+          <li><a href="https://www.cinra.co.jp/member/6"><i class="fa fa-building"></i> CINRA, inc.</a></li>
+        </ul>
       </div>
+      <p class="footer-credit">&copy; written and designed by HAMADA, Satoshi / illustration by <a href="http://monpot.com">monpot</a></p>
     </footer>
 
     {% include analytics.html %}

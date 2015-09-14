@@ -6,10 +6,20 @@
   > a, span {
     display: block;
     padding:16px 20px;
-    font-size:2.4rem;
+    font-size:3rem;
     font-family: $strongFont;
     color: #000;
+    > i {
+      margin-right: 5px;
+    }
   }
+
+  @include mobile {
+    > a, span {
+      font-size: 2.4rem;
+    }
+  }
+
 }
 
 .post-body {
@@ -24,12 +34,96 @@
   > h5,
   > h6,
   > ul,
-  > ol,
-  > blockquote {
+  > ol, {
     padding:0 20px 20px;
-    > img {
-      max-width: 100%;
-      height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    padding-top: 12px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    //border-top: $smallBorder solid #000;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    border-top: $xsBorder dashed #000;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    border-top: $xsBorder solid $baseDarkColor;
+  }
+
+  h4,
+  h5 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    border-top: $xsBorder solid $baseDarkColor;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  table,
+  blockquote {
+    margin:0 20px 20px;
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  table {
+    max-width: calc(100% - 40px);
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all;
+    //border: $smallBorder solid #000;
+
+    th, td {
+      padding: 6px 13px;
+      border: 1px solid #000;
+    }
+
+    th,
+    tr:nth-child(2n) {
+      background-color: $baseDarkColor;
+    }
+  }
+
+  blockquote {
+    padding: 0 0 0 15px;
+    color: #444;
+    border-left: 4px solid $baseDarkColor;
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style: none;
+    > li {
+      > ul {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  ol {
+    list-style-position: inside;
+    > li {
+      > ol {
+        margin-left: 20px;
+      }
     }
   }
 }
@@ -40,6 +134,6 @@
 
 .post-footer {
   padding: 20px;
-  border-top: $smallBorder dotted #000;
+  border-top: $xsBorder dashed #000;
   font-size: 0.8rem;
 }
