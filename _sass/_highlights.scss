@@ -4,13 +4,14 @@
   margin: 0 20px 20px;
   background-color: #000;
   overflow: auto;
+  code {
+    font-size:1rem;
+    line-height: 1.4;
+    color: #CCC;
+  }
 }
 
-code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
-  font-size:1rem;
-  line-height: 1.4;
-}
+
 
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
