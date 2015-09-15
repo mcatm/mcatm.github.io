@@ -2,6 +2,7 @@
 layout: post
 title: WordpressのRest APIを使ったサイト構築
 permalink: /post/angularjs-dont-make-us-happy/
+tags: [wordpress, html, javascript]
 ---
 
 予め言っておくと、筆者は偉そうなことばかり抜かしていますが、仕事では圧倒的にWordpressを弄っていることが多い。そうすると、本当に簡単にルーチンワークの罠に陥るわけです。

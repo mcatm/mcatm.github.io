@@ -1,0 +1,6 @@
+wordpress:
+  name: Wordpress
+javascript:
+  name: Javascript
+html:
+  name: HTML

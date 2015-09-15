@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" lang="ja">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    <title>{% if page.title %}{{ page.title }} – {% elsif page.tag %}{{ page.tag }} - {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
 

@@ -2,15 +2,16 @@
 .highlight {
   padding: 16px !important;
   margin: 0 20px 20px;
-  background-color: $baseLightColor;
+  background-color: #000;
   overflow: auto;
+  code {
+    font-size:1rem;
+    line-height: 1.4;
+    color: #CCC;
+  }
 }
 
-code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
-  font-size:1rem;
-  line-height: 1.4;
-}
+
 
 .highlight .c { color: #586E75 } /* Comment */
 .highlight .err { color: #93A1A1 } /* Error */
@@ -54,7 +55,7 @@ code {
 .highlight .nf { color: #268BD2 } /* Name.Function */
 .highlight .nl { color: #93A1A1 } /* Name.Label */
 .highlight .nn { color: #93A1A1 } /* Name.Namespace */
-.highlight .nx { color: #555 } /* Name.Other */
+.highlight .nx { color: #CCC } /* Name.Other */
 .highlight .py { color: #93A1A1 } /* Name.Property */
 .highlight .nt { color: #268BD2 } /* Name.Tag */
 .highlight .nv { color: #268BD2 } /* Name.Variable */
