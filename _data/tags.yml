@@ -1,6 +1,14 @@
+backend:
+  name: Backend
 wordpress:
   name: Wordpress
+frontend:
+  name: Frontend
 javascript:
   name: Javascript
 html:
   name: HTML
+infrastructure:
+  name: Infrastructure
+docker:
+  name: Docker

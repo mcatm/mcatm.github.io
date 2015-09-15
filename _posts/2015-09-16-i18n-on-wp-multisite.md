@@ -2,7 +2,7 @@
 layout: post
 title: Wordpress Multisiteで多言語展開する特殊なやり方
 permalink: /post/i18n-on-wp-multisite/
-tags: [wordpress]
+tags: [wordpress, backend]
 ---
 
 WordpressのMultisite機能を使って構築したサイトで、多言語展開したいという話がありまして。

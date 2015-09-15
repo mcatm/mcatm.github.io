@@ -2,6 +2,7 @@
 layout: post
 title: 「とりあえずSocial Plugin」← 止めたい…
 permalink: /post/about-social-plugins/
+tags: [frontend]
 ---
 
 TwitterにFacebook…ぐらいの頃はまだ牧歌的だった…。

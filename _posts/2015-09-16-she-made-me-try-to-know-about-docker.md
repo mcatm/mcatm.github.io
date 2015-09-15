@@ -2,6 +2,7 @@
 layout: post
 title: Dockerについて調べなければいけない雰囲気になってる話
 permalink: /post/she-made-me-try-to-know-about-docker/
+tags: [infrastructure, docker]
 ---
 
 隣の席のY嬢が、「私がDockerやったら、びっくりしますか？」って突然言ってきたので、「ああ、びっくりする」と返したら、Apacheだけ立ちあげて、「後はどうぞ」みたいな雰囲気を漂わせてきたので、むしろそっちの方がびっくりした。
@@ -9,3 +10,9 @@ permalink: /post/she-made-me-try-to-know-about-docker/
 **…調べなきゃダメなんすかね…？**
 
 元々、Vagrantを使った開発環境を構築していたんだが、それが重いとのことでDockerに目をつけたのだそう。エンジニアは、**「面倒くさい事を避けるために、面倒くさいことをするべき」**であるから、志たるやよし！と思ったので、Dockerについて調べてみることにする。（しかしVagrantが重いのではなく、provisionで走るChefが重い、そしてその重さにはわけがある…やつじゃないかなと思った。つまりDockerにしても変わらん、と）
+
+## Dockerとは？
+
+## インストール
+
+## 設定
