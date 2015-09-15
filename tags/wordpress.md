@@ -2,5 +2,5 @@
 layout: tag
 title: Wordpress
 tag: wordpress
-permalink: /tags/wordpress/
+permalink: /tag/wordpress/
 ---

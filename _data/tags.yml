@@ -1,4 +1,6 @@
-- slug: wordpress
+wordpress:
   name: Wordpress
-- slug: javascript
+javascript:
   name: Javascript
+html:
+  name: HTML
