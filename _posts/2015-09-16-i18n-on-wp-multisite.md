@@ -66,7 +66,7 @@ http://example.com/site/en/page
 define('WP_USE_THEMES', true);
 
 define('WPLANG', 'en');
-$_SERVER['REQUEST_URI'] = str_replace('/' . $_SERVER['LANG'], '', $_SERVER['REQUEST_URI']);
+$_SERVER['REQUEST_URI'] = str_replace('/' . WPLANG, '', $_SERVER['REQUEST_URI']);
 
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/../wp-blog-header.php' );
