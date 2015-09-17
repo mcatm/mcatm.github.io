@@ -9,17 +9,17 @@ tags: [linux,server,infrastructure,php,chef]
 
 ChefでPHPをインストールするCookbookを書いて、その中で`php-gd`をインストールする処理を書いてたりすると、最近こんな感じでガゴッとエラーが返ってくる。
 
-```log
+```
 Error executing action `install` on resource 'yum_package[php-gd]'
 ```
 
 勿論、直前に`gd-last`はインストール済み。泣き言一つ言わずにスルッとインストールされてくれた。で、仕方ないのでSSHでサーバーにログイン、`$ yum install -y --enablerepo=remi-php55 php-gd`みたいな感じで実行してやると、エラーの内訳が分かる。`t1lib`が足りないんだと。
 
-```ssh
+```
 $ yum install -y php-gd --enablerepo=remi-php55
 ```
 
-```log
+```
 読み込んだプラグイン:fastestmirror, priorities, security
 インストール処理の設定をしています
 Loading mirror speeds from cached hostfile
@@ -51,13 +51,13 @@ Loading mirror speeds from cached hostfile
 
 もう適当に、`ftp://ftp.muug.mb.ca/mirror/centos/6.7/os/x86_64/Packages/t1lib-5.1.2-6.el6_2.1.x86_64.rpm`とかを、そのままrpmでインストール。
 
-```ssh
+```
 $ rpm -ivh ftp://ftp.muug.mb.ca/mirror/centos/6.7/os/x86_64/Packages/t1lib-5.1.2-6.el6_2.1.x86_64.rpm
 ```
 
 そうすると、スコーンと`t1lib`がインストールされる。もう、`$ yum install -y --enablerepo=remi-php55 php-gd`も怖くないぞ！
 
-```ssh
+```
 $ yum install -y --enablerepo=remi-php55 php-gd
 ```
 
