@@ -12,3 +12,11 @@ team:
   name: Team
 css:
   name: CSS
+linux:
+  name: Linux
+server:
+  name: Server
+infrastructure:
+  name: Infrastructure
+chef:
+  name: Chef
