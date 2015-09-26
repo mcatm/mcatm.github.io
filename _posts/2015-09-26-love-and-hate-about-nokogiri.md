@@ -141,6 +141,14 @@ $ ARCHFLAGS="-arch x86_64" gem install nokogiri -v 1.5.11 -- --use-system-librar
 
 これでインストールは成功…するんだけど、バージョンが1.5.11ではRailsのDependencyを解決できずに、結局同じようにエラー吐いて終了してしまいます。
 
+ちなみにARCHFLAGSは、`.bash_profile`とか、`.zshrc`とかに、
+
+```
+export ARCHFLAGS="-arch x86_64"
+```
+
+と記述しておくのが吉。
+
 ### 結局
 
 rubyのバージョン落とすことで対応しました…。**この恨み、いつか晴らすぞ、Nokogiri！**
