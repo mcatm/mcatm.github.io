@@ -20,3 +20,7 @@ infrastructure:
   name: Infrastructure
 chef:
   name: Chef
+rails:
+  name: Ruby on Rails
+ruby:
+  name: Ruby

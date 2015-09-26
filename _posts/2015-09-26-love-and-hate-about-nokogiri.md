@@ -2,7 +2,7 @@
 layout: post
 title: Nokogiriにハマるつもりじゃなかった
 permalink: /post/love-and-hate-about-nokogiri/
-tags: [rails, ruby, nokogiri]
+tags: [rails, ruby]
 ---
 
 またしてもrails入れようとしてハマった…。
