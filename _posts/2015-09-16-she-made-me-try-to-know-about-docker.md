@@ -13,6 +13,16 @@ tags: [infrastructure, docker]
 
 ## Dockerとは？
 
-## インストール
+<img src="/i/docker.png" alt="このタコ、何？">
+
+> Docker（ドッカー）はソフトウェアコンテナ内のアプリケーションのデプロイメントを自動化するオープンソースソフトウェアである。
+
+とWikipediaが言うように、「OS仮想化ソフトウェア」というわけではなく（要するにVagrantの代替というわけではない）、「デプロイメント自動化ツール」なんですね。ただ、今の用途は完全に仮想OSですので、そのつもりで挑みます。「ドック作業員（Docker）」ってだけあって、随分海推しですね。
+
+## インストール（OS X）
+
+Docker Toolboxをインストールします。
+
+[Docker Toolbox | docker](https://www.docker.com/toolbox)
 
 ## 設定
