@@ -8,7 +8,25 @@ javascript:
   name: Javascript
 html:
   name: HTML
-infrastructure:
-  name: Infrastructure
 docker:
   name: Docker
+php:
+  name: PHP
+working:
+  name: Working
+team:
+  name: Team
+css:
+  name: CSS
+linux:
+  name: Linux
+server:
+  name: Server
+infrastructure:
+  name: Infrastructure
+chef:
+  name: Chef
+rails:
+  name: Ruby on Rails
+ruby:
+  name: Ruby

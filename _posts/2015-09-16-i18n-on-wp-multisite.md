@@ -65,13 +65,13 @@ http://example.com/site/en/page
 ```php
 define('WP_USE_THEMES', true);
 
-$_SERVER['LANG'] = 'en';
-$_SERVER['REQUEST_URI'] = str_replace('/' . $_SERVER['LANG'], '', $_SERVER['REQUEST_URI']);
+define('WPLANG', 'en');
+$_SERVER['REQUEST_URI'] = str_replace('/' . WPLANG, '', $_SERVER['REQUEST_URI']);
 
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/../wp-blog-header.php' );
 ```
 
-これで、`/en`でアクセスした時も、`/`へのアクセスと同様の内容を返してくれる。`$_SERVER['LANG']`も設定しているので、それを参照すれば、現在何語のコンテンツを見ているのか明示できる。
+これで、`/en`でアクセスした時も、`/`へのアクセスと同様の内容を返してくれる。`WPLANG`も設定しているので、それを参照すれば、現在何語のコンテンツを見ているのか明示できるし、`get_locale()`も普通に使える（…はずなんだけど、俺は`locale`フィルターにフック決めた）。
 
 `$_SERVER['REQUEST_URI']`を書き換えるので、決してお行儀の良いソリューションではないんだが、ちょっとこれで様子を観てみようかなと思ってます。

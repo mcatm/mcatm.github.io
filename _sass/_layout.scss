@@ -28,6 +28,8 @@ a {
 
 code {
   font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  background: rgba(0,0,0,0.1);
+  padding:0 3px;
 }
 
 .l-wrapper {
@@ -152,12 +154,22 @@ code {
     font-weight: 400;
     border-bottom: $xsBorder solid $baseDarkColor;
   }
-
   ul {
-    list-style-position: inside;
+    list-style: none;
     li {
       font-size: 1rem;
       padding: 10px;
+    }
+  }
+  > ul {
+    list-style-position: inside;
+    > li {
+      > ul {
+        > li {
+          @include icon($fa-var-angle-right);
+          padding: 5px 10px 0;
+        }
+      }
     }
   }
 
