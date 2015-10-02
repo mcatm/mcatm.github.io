@@ -97,4 +97,5 @@ enabled=0
 
 #### 参考
 
+- [CentOS • View topic - yum update not working](https://www.centos.org/forums/viewtopic.php?f=13&t=45253)
 - [coderwall.com : establishing geek cred since 1305712800](https://coderwall.com/p/s9uceg/installing-php-5-4-on-rhel-6-3-using-remi-repo)
