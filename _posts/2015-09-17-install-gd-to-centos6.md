@@ -69,7 +69,9 @@ CentOSにPHP5.3.3以上を入れようとすると異常に手こずる…とい
 
 `remi-php55`もインストールしてあって、`--enablerepo`も指定してあるのに、`yum list`してみると「**PHP5.3.3が最新です**」なんてしれっとぬかしやがる場合がある。
 
-この時は、`/etc/yum.repos.d/CentOS-Base.repo`を無効にしてやると良いです。効果てきめんです。
+~~この時は、`/etc/yum.repos.d/CentOS-Base.repo`を無効にしてやると良いです。効果てきめんです。~~
+
+→ 一応下記に処理を残しておきますが、この場合`--disblerepo=xxx`と、無視するリポジトリを指定するのが正しいやり方ですね。さくらの場合は、`$ yum install php --enablerepo=remi --disblerepo=base --disablerepo=updates`で十分でした。
 
 ```
 [base]
@@ -90,3 +92,9 @@ enabled=0
 を足してやるだけ。これで、無事にPHP5.5がインストールできます。
 
 ただし、それが終わったら、きちんと`enabled=0`をコメントアウトしてやってね。他のモジュールがインストール出来なくなったりしますのでー。
+
+===
+
+#### 参考
+
+- [coderwall.com : establishing geek cred since 1305712800](https://coderwall.com/p/s9uceg/installing-php-5-4-on-rhel-6-3-using-remi-repo)
