@@ -51,6 +51,19 @@ wp plugin install advanced-custom-fields
 
 Advanced Custom Fieldsをインストールするのもこんな感じ。`wp plugin install {プラグインのslug}`でインストール可能です。プラグインを探すには、`wp plugin search {クエリ}`といった感じ。プラグインを有効化するときも、`wp plugin activate {プラグインのslug}`で一発です。
 
+```
+wp theme install {テーマのslug}
+wp theme activate {テーマのslug}
+```
+
+テーマをインストールしたり、有効化したりするのも、この通り、非常に簡単です。
+
+```
+wp scaffold _s {テーマ名}
+```
+
+Scaffoldも充実していて、上記の`wp scaffold _s`は、空のテーマを生成します。試してみたんですが、余計なコード（Jetpackの機能をいくつか有効化してたり）が多かったので使わないとは思うんですが、一般的なテーマの作り方が一通り記述してあるので、テーマ制作初心者には嬉しいかもしれないですね。
+
 ---
 
 ### ユニットテスト／BDD
