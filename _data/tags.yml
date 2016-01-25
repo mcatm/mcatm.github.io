@@ -24,3 +24,5 @@ rails:
   name: Ruby on Rails
 ruby:
   name: Ruby
+capistrano:
+  name: Capistrano
