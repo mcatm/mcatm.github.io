@@ -79,7 +79,7 @@ $ ansible -i ansible/hosts 192.168.33.45 -m ping
 
 ##### Playbookを記述
 
-```yml
+```
 - hosts: development
   become: yes
   tasks:
