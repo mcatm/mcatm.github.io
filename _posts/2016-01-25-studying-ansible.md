@@ -23,7 +23,7 @@ Provisionは走らないようにして、`$ vagrant up`を実行（IPアドレ�
 
 ### 仮想サーバーへの疎通を確認します
 
-サーバーの疎通を確認するために、`ping`を打ってみる。`-m`はModuleの`m`。Ansibleで利用できるModuleにはかなりの数があり、これだけでChefよりリッチな気がする。Moduleの詳細は[ここで確認できます](http://docs.ansible.com/ansible/modules_by_category.html)
+サーバーの疎通を確認するために、`ping`を打ってみる。`-m`はModuleの「**m**」。Ansibleで利用できるModuleにはかなりの数があり、これだけでChefよりリッチな気がする。Moduleの詳細は[ここで確認できます](http://docs.ansible.com/ansible/modules_by_category.html)
 
 ```bash
 $ ansible 192.168.33.45 -m ping
@@ -33,7 +33,7 @@ $ ansible 192.168.33.45 -m ping
 ERROR: Unable to find an inventory file, specify one with -i ?
 ```
 
-こんな感じで、「サーバーの構成リストの中にこのIP含まれてないよ」と優しく諭されます。「`-i忘れてない？`」って（「？」が優しさ）。
+こんな感じで、「サーバーの構成リストの中にこのIP含まれてないよ」と優しく諭されます。「`-i`忘れてない？」って（「？」が優しさ）。
 
 そこでIPアドレスを単に列挙したサーバーの構成リスト（Inventoryと呼ぶ）を`-i`オプションで指定してやりましょう。
 
@@ -72,7 +72,9 @@ $ ansible -i ansible/hosts 192.168.33.45 -m ping
 }
 ```
 
-**疎通確認！**だが待って欲しい。俺たちの冒険はここから始まります。ここからは、「**AnsibleでLAMP環境を構築するPlaybookを書き、VagrantのProvisionで走らせるまで…**」に挑戦してみることにします。
+**疎通確認！**
+
+だが待って欲しい。俺たちの冒険はここから始まります。そう、ここからは、「**AnsibleでLAMP環境を構築するPlaybookを書き、VagrantのProvisionで走らせるまで…**」に挑戦してみることにします。
 
 ---
 
