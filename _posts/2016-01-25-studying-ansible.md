@@ -25,7 +25,7 @@ Provisionは走らないようにして、`$ vagrant up`を実行（IPアドレ�
 
 サーバーの疎通を確認するために、`ping`を打ってみる。`-m`はModuleの`m`。Ansibleで利用できるModuleにはかなりの数があり、これだけでChefよりリッチな気がする。Moduleの詳細は[ここで確認できます](http://docs.ansible.com/ansible/modules_by_category.html)
 
-```
+```bash
 $ ansible 192.168.33.45 -m ping
 ```
 
@@ -39,7 +39,7 @@ ERROR: Unable to find an inventory file, specify one with -i ?
 
 > 僕の場合は、Ansibleのファイルは一箇所にまとめたいので、`/ansible`というディレクトリを作っています。`$ cd ansible`してからコマンド叩いてやる方法もあるんですけど、プロジェクトルートから色々やりたいので、以下の様な書き方にしますね。
 
-```
+```bash
 $ echo 192.168.33.45 > ansible/hosts
 $ ansible -i ansible/hosts 192.168.33.45 -m ping
 ```
@@ -54,14 +54,14 @@ It is sometimes useful to re-run the command using -vvvv, which prints SSH debug
 
 要するに、**SSHでの接続権限が無い**、と。なので、仮想サーバーの方に公開鍵を追記してやって、SSHでの疎通を確認します。`$ vi ~/.ssh/id_rsa.pub`とかで、公開鍵の中身を把握しておきます（Github使ってるなら、既にあるでしょ公開鍵 ← 雑）
 
-```
+```bash
 $ vagrant ssh
 $ vi ~/.ssh/authorized_keys
 ```
 
 ここに、さっきの公開鍵の中身を追記しておきます。その上で、もう一回下記コマンド実行。
 
-```
+```bash
 $ ansible -i ansible/hosts 192.168.33.45 -m ping
 ```
 
@@ -97,7 +97,7 @@ Ansibleでは、タスクをまとめたものを「**Playbook**」と呼びま�
 
 こんな感じでテスト用Playbookを書いてみます。これは単に、「Apacheが動いているか確認する」というPlaybookですね。`become`という項目は、このタスクを`sudo`で行うという意味です。
 
-```
+```yaml
 - hosts: development
   become: yes
   tasks:
@@ -111,19 +111,19 @@ Ansibleでは、タスクをまとめたものを「**Playbook**」と呼びま�
 
 まずはシンタックスチェックが出来ます。
 
-```
+```bash
 $ ansible-playbook -i ansible/development ansible/development.yml --syntax-check
 ```
 
 ドライランで、「実際には実行しないけど、実行したらこんな感じになるよ…」っていうのを試してみることが出来ます。
 
-```
+```bash
 $ ansible-playbook -i ansible/development ansible/development.yml --check
 ```
 
 で、実行！
 
-```
+```bash
 $ ansible-playbook -i ansible/development ansible/development.yml
 ```
 
@@ -158,13 +158,13 @@ Ansibleの公式ドキュメントには「[Best Practices](http://docs.ansible.
 
 **site.yml**
 
-```
+```yaml
 - include: development.yml
 ```
 
 読み込まれるdevelopment.ymlを見てみましょう。
 
-```
+```yaml
 ---
 - name: Install LAMP
   hosts: lamp
@@ -189,7 +189,7 @@ Apacheをインストールするタスクを見てみましょう。`/roles/htt
 
 **[/roles/httpd/tasks/main.yml](https://github.com/mcatm/studying-ansible/blob/master/ansible/roles/httpd/tasks/main.yml)**
 
-```
+```yaml
 - name: Install httpd
   yum: name=httpd state=present
   tags: [lamp, httpd]
@@ -203,13 +203,13 @@ Apacheをインストールするタスクを見てみましょう。`/roles/htt
 
 実際に実行されるタスクの一覧を確認することも出来て、非常に便利！
 
-```
+```bash
 $ ansible-playbook -i ansible/development ansible/site.yml --list-tasks
 ```
 
 ### 実行！
 
-```
+```bash
 $ ansible-playbook -i ansible/development ansible/site.yml
 ```
 
